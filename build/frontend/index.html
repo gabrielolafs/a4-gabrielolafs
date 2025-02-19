@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>CS4241 Assignment 2</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="js/main.js"></script>
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+</head>
+<body class="container mt-5">
+<header>
+    <div id="user-info" class="text-center mb-3"></div>
+    <h1 class="text-center">Assignment Tracker</h1>
+    <h6 class="text-center">By: Gabriel Olafsson</h6>
+</header>
+
+<main>
+    <form id="taskForm" class="mt-4" aria-labelledby="taskFormTitle">
+        <h3 id="taskFormTitle">Enter a new task:</h3>
+
+        <div class="form-group">
+            <label for="task">Task:</label>
+            <input type="text" id="task" name="task" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+            <label for="priority">Priority:</label>
+            <select id="priority" name="priority" class="form-control" required>
+                <option value="Low">Low</option>
+                <option value="Medium">Medium</option>
+                <option value="High">High</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="dueDate">Due Date:</label>
+            <input type="date" id="dueDate" name="dueDate" class="form-control" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Add Task</button>
+    </form>
+
+    <h2 class="mt-5">Total List of Assignments:</h2>
+    <table class="table table-striped mt-3">
+        <thead>
+        <tr>
+            <th>Complete? (edits)</th>
+            <th>Days Till Due</th>
+            <th>Task</th>
+            <th>Priority</th>
+            <th>Due Date</th>
+        </tr>
+        </thead>
+        <tbody id="completedTasksBody">
+        <!-- This is where the tasks will be displayed -->
+        </tbody>
+    </table>
+</main>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
