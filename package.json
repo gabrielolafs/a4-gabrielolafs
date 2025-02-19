@@ -56,5 +56,8 @@
   "devDependencies": {
     "middleware": "^1.0.0",
     "vite": "^6.1.0"
+  },
+  "engines": {
+    "node": "^16"
   }
 }
