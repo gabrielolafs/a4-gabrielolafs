@@ -9,5 +9,11 @@
         }
       ]
     }
+  ],
+  "rewrites": [
+    {
+      "source": "/src/index.jsx",
+      "destination": "/src/index.jsx"
+    }
   ]
 }
