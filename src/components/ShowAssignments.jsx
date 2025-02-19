@@ -46,7 +46,7 @@ const ShowAssignments = ({ tasks, fetchTasks }) => {
                 </tr>
                 </thead>
                 <tbody id="completedTasksBody">
-                {tasks.map(task => (
+                {Array.isArray(tasks) ? tasks.map(task => (
                     <tr key={task._id}>
                         <td>
                             <input
@@ -64,7 +64,7 @@ const ShowAssignments = ({ tasks, fetchTasks }) => {
                             <button className="btn btn-danger" onClick={() => handleDelete(task.task)}>Delete</button>
                         </td>
                     </tr>
-                ))}
+                )) : <>No tasks to display</>}
                 </tbody>
             </table>
         </div>
